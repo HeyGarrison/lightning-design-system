@@ -6,14 +6,6 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  - type: textarea
-    id: bug-description
-    attributes:
-      label: Describe the bug
-      description: A clear and concise description of what the bug is. If you intend to submit a PR for this issue, tell us in the description. Thanks!
-      placeholder: I am doing ... What I expect is ... What actually happening is ...
-    validations:
-      required: true
   - type: input
     id: reproduction
     attributes:
@@ -23,17 +15,46 @@ body:
     validations:
       required: true
   - type: textarea
-    id: reproduction-steps
+    id: bug-description
     attributes:
-      label: Steps to reproduce
-      description: Please provide any reproduction steps that may need to be described. E.g. if it happens only when running the dev or build script make sure it's clear which one to use.
-      placeholder: Run `npm install` followed by `npm run dev`
-  - type: textarea
-    id: system-info
-    attributes:
-      label: System Info
-      description: Output of `npx envinfo --system --npmPackages '{vite,@vitejs/*,rollup}' --binaries --browsers`
-      render: shell
-      placeholder: System, Binaries, Browsers
+      label: Describe the issue
+      description: Is it a bug or a feature request (new component, new icon, new CSS class)?
+      placeholder: A bug where...
     validations:
       required: true
+  - type: input
+    id: specific-component
+    attributes:
+      label: Is this issue related to a specific component, variant, and/or state? If so, please detail which.
+      description: Page Header > Voice > Cancelled
+      placeholder: Directory > Component
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Are any specific browsers impacted by this bug?
+      description: Chrome, Edge, Firefox, Safari, etc.
+      placeholder: Chrome 56 on macOS 11.2
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Which version of the Salesforce Lightning Design System are you using?
+      description: If you're not sure, be specific about the environment: e.g. The bug happens in Visualforce when importing SLDS via `<apex:slds />` in a Spring ’17 org.
+      placeholder: 2.2.2
+    validations:
+      required: true
+  - type: textarea
+    id: expect-happen
+    attributes:
+      label: What did you expect to happen?
+      description: Long text wraps on multiple lines
+      placeholder: Something...
+  - type: textarea
+    id: actually-happen
+    attributes:
+      label: What actually happened?
+      description: Long text wraps on multiple lines
+      placeholder: Something...
