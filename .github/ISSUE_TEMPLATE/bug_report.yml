@@ -42,7 +42,7 @@ body:
     id: version
     attributes:
       label: Which version of the Salesforce Lightning Design System are you using?
-      description: If you're not sure, be specific about the environment: e.g. The bug happens in Visualforce when importing SLDS via `<apex:slds />` in a Spring ’17 org.
+      description: If you're not sure, be specific about the environment: e.g. The bug happens in Visualforce when importing SLDS via <apex:slds /> in a Spring ’17 org.
       placeholder: 2.2.2
     validations:
       required: true
